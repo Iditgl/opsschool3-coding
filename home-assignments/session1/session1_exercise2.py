@@ -25,7 +25,6 @@ for x in cities:
     city_weather = get('http://api.openweathermap.org/data/2.5/weather?appid=24b52b13fae832ec6edd1f353d45b150&q='+x).json()
     temp_in_celsius = pytemperature.k2c(city_weather['main']['temp'])
     country = city_weather['sys']['country']
-#    full_country_name = pycountry-convert.country_alpha3_to_country_name(cn_name_format="default")
     full_country_name = pycountry.countries.get(alpha_2=country)
     print('The weather in  '+ x + ', ' + full_country_name.name + ' is ' + str(round(temp_in_celsius)) + ' degrees')
 
