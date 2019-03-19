@@ -7,7 +7,7 @@ node {
        sh 'echo "unit test has started"'
    }
    stage('system test'){
-       sh 'python session1_exercise1.py'
+       sh 'python idit.py'
    }
    stage('integration test'){
        sh 'echo "integration test has started"'
